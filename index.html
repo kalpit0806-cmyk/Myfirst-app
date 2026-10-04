@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My First App</title>
+    <meta name="theme-color" content="#172554">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="top-bar">
+            <div class="logo">MY APP</div>
+            <div class="menu">☰</div>
+        </header>
+
+        <main class="content">
+
+            <div class="hero">
+                <div class="icon">🚀</div>
+
+                <h1>My First App</h1>
+
+                <p>
+                    Welcome! This is my first application
+                    made with HTML, CSS and JavaScript.
+                </p>
+
+                <button onclick="startApp()">
+                    Start App
+                </button>
+            </div>
+
+            <div class="info-card">
+                <h2>What can I do?</h2>
+
+                <div class="feature">
+                    <span>🎨</span>
+                    <div>
+                        <h3>Beautiful Design</h3>
+                        <p>We can create a modern app interface.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <span>⚡</span>
+                    <div>
+                        <h3>Fast</h3>
+                        <p>JavaScript will make our app interactive.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <span>📱</span>
+                    <div>
+                        <h3>Mobile Friendly</h3>
+                        <p>The design will fit your phone screen.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <nav class="bottom-nav">
+            <button onclick="showHome()">🏠<small>Home</small></button>
+            <button onclick="showMessage()">⭐<small>Explore</small></button>
+            <button onclick="showMessage()">⚙️<small>Settings</small></button>
+        </nav>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("./sw.js")
+                .then(() => {
+                    console.log("App is ready!");
+                })
+                .catch(error => {
+                    console.log("Service Worker Error:", error);
+                });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "name": "My First App",
+    "short_name": "My App",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#172554",
+    "description": "My first progressive web application",
+    "icons": []
+  }
